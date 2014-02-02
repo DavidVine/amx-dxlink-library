@@ -130,7 +130,7 @@ amx-dxlink-listener
 #####Description:
 Contains dev arrays for listening to traffic returned from the AMX DXLink end-point device.
 
-You should copy the required dev arrays to their main program and instantiate them with dev values corresponding to the ports of DXLink they wish to listen to.
+You should copy the required dev arrays to their main program and instantiate them with dev values corresponding to the ports of DXLink you wish to listen to.
 
 Contains commented out callback functions and events required to capture information from the DXLink end-point device. The events (data_events, channel_events, & level_events) will parse the information returned from the DXLink device and call the associated callback functions passing the information through as arguments to the call back functions' parameter list.
 
