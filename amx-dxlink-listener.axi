@@ -91,8 +91,8 @@ dev dvDxlinkRxAudOutPorts[] = {8001:6:0}
 #define INCLUDE_DXLINK_NOTIFY_TX_SWITCH_CALLBACK
 define_function dxlinkNotifyTxSwitch (dev dxlinkTxPort1, integer input, integer output)
 {
-    // dxlinkTxPort1 is port 1 on the DXLink Tx.
-    // input contains the input port on the DXLink TX that has been selected (DXLINK_PORT_VIDEO_INPUT_ANALOG | DXLINK_PORT_VIDEO_INPUT_DIGITAL)
+	// dxlinkTxPort1 is port 1 on the DXLink Tx.
+	// input contains the input port on the DXLink TX that has been selected (DXLINK_PORT_VIDEO_INPUT_ANALOG | DXLINK_PORT_VIDEO_INPUT_DIGITAL)
 	// output contains the output of the DXLink TX. This is always DXLINK_PORT_VIDEO_OUTPUT.
 }
 */
@@ -109,8 +109,8 @@ define_function dxlinkNotifyTxSwitch (dev dxlinkTxPort1, integer input, integer 
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_STATUS_ANALOG_CALLBACK
 define_function dxlinkNotifyTxVideoInputStatusAnalog (dev dxlinkTxAnalogVideoInput, char signalStatus[])
 {
-    // dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-    // signalStatus is the input signal status (DXLINK_SIGNAL_STATUS_NO_SIGNAL | DXLINK_SIGNAL_STATUS_UNKNOWN | DXLINK_SIGNAL_STATUS_VALID_SIGNAL)
+	// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
+	// signalStatus is the input signal status (DXLINK_SIGNAL_STATUS_NO_SIGNAL | DXLINK_SIGNAL_STATUS_UNKNOWN | DXLINK_SIGNAL_STATUS_VALID_SIGNAL)
 }
 */
 
@@ -118,8 +118,8 @@ define_function dxlinkNotifyTxVideoInputStatusAnalog (dev dxlinkTxAnalogVideoInp
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_STATUS_DIGITAL_CALLBACK
 define_function dxlinkNotifyTxVideoInputStatusDigital (dev dxlinkTxDigitalVideoInput, char signalStatus[])
 {
-    // dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
-    // signalStatus is the input signal status (DXLINK_SIGNAL_STATUS_NO_SIGNAL | DXLINK_SIGNAL_STATUS_UNKNOWN | DXLINK_SIGNAL_STATUS_VALID_SIGNAL)
+	// dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
+	// signalStatus is the input signal status (DXLINK_SIGNAL_STATUS_NO_SIGNAL | DXLINK_SIGNAL_STATUS_UNKNOWN | DXLINK_SIGNAL_STATUS_VALID_SIGNAL)
 }
 */
 
@@ -127,8 +127,8 @@ define_function dxlinkNotifyTxVideoInputStatusDigital (dev dxlinkTxDigitalVideoI
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_FORMAT_ANALOG_CALLBACK
 define_function dxlinkNotifyTxVideoInputFormatAnalog (dev dxlinkTxAnalogVideoInput, char videoFormat[])
 {
-    // dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-    // videoFormat is the video format (cVIDEO_SIGNAL_FORMAT_VGA | cVIDEO_SIGNAL_FORMAT_COMPOSITE | cVIDEO_SIGNAL_FORMAT_COMPONENT | cVIDEO_SIGNAL_FORMAT_SVIDEO)
+	// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
+	// videoFormat is the video format (cVIDEO_SIGNAL_FORMAT_VGA | cVIDEO_SIGNAL_FORMAT_COMPOSITE | cVIDEO_SIGNAL_FORMAT_COMPONENT | cVIDEO_SIGNAL_FORMAT_SVIDEO)
 }
 */
 
@@ -136,8 +136,8 @@ define_function dxlinkNotifyTxVideoInputFormatAnalog (dev dxlinkTxAnalogVideoInp
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_FORMAT_DIGITAL_CALLBACK
 define_function dxlinkNotifyTxVideoInputFormatDigital (dev dxlinkTxDigitalVideoInput, char videoFormat[])
 {
-    // dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
-    // videoFormat is the video format (cVIDEO_SIGNAL_FORMAT_DVI | cVIDEO_SIGNAL_FORMAT_HDMI)
+	// dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
+	// videoFormat is the video format (cVIDEO_SIGNAL_FORMAT_DVI | cVIDEO_SIGNAL_FORMAT_HDMI)
 }
 */
 
@@ -145,8 +145,8 @@ define_function dxlinkNotifyTxVideoInputFormatDigital (dev dxlinkTxDigitalVideoI
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_AUTO_SELECT_CALLBACK
 define_function dxlinkNotifyTxVideoInputAutoSelect (dev dxlinkTxPort1, char status[])
 {
-    // dxlinkTxPort1 is the port #1 on the DXLink Tx
-    // status contains the auto video input select status (cENABLE | cDISABLE)
+	// dxlinkTxPort1 is the port #1 on the DXLink Tx
+	// status contains the auto video input select status (cENABLE | cDISABLE)
 }
 */
 
@@ -154,8 +154,8 @@ define_function dxlinkNotifyTxVideoInputAutoSelect (dev dxlinkTxPort1, char stat
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_AUTO_RESOLUTION_ANALOG_CALLBACK
 define_function dxlinkNotifyTxVideoInputResolutionAutoAnalog (dev dxlinkTxAnalogVideoInput, char status[])
 {
-    // dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-    // status is the auto resolution detect status (cENABLE | cDISABLE)
+	// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
+	// status is the auto resolution detect status (cENABLE | cDISABLE)
 }
 */
 
@@ -163,8 +163,8 @@ define_function dxlinkNotifyTxVideoInputResolutionAutoAnalog (dev dxlinkTxAnalog
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_AUTO_RESOLUTION_DIGITAL_CALLBACK
 define_function dxlinkNotifyTxVideoInputResolutionAutoDigital (dev dxlinkTxDigitalVideoInput, char status[])
 {
-    // dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
-    // status is the auto resolution detect status (cENABLE | cDISABLE)
+	// dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
+	// status is the auto resolution detect status (cENABLE | cDISABLE)
 }
 */
 
@@ -172,8 +172,8 @@ define_function dxlinkNotifyTxVideoInputResolutionAutoDigital (dev dxlinkTxDigit
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_RESOLUTION_ANALOG_CALLBACK
 define_function dxlinkNotifyTxVideoInputResolutionAnalog (dev dxlinkTxAnalogVideoInput, char resolution[])
 {
-    // dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-    // resolution is the input resolution.
+	// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
+	// resolution is the input resolution.
 }
 */
 
@@ -181,8 +181,8 @@ define_function dxlinkNotifyTxVideoInputResolutionAnalog (dev dxlinkTxAnalogVide
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_RESOLUTION_DIGITAL_CALLBACK
 define_function dxlinkNotifyTxVideoInputResolutionDigital (dev dxlinkTxDigitalVideoInput, char resolution[])
 {
-    // dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
-    // resolution is the input resolution.
+	// dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
+	// resolution is the input resolution.
 }
 */
 
@@ -190,8 +190,8 @@ define_function dxlinkNotifyTxVideoInputResolutionDigital (dev dxlinkTxDigitalVi
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_EDID_SOURCE_ANALOG_CALLBACK
 define_function dxlinkNotifyTxVideoInputEdidSourceAnalog (dev dxlinkTxAnalogVideoInput, char edidSource[])
 {
-    // dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-    // edidSource is the source of the EDID on the DXLink analog video input (DXLINK_EDID_SOURCE_ALL_RESOLUTIONS | DXLINK_EDID_SOURCE_USER_EDID_1)
+	// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
+	// edidSource is the source of the EDID on the DXLink analog video input (DXLINK_EDID_SOURCE_ALL_RESOLUTIONS | DXLINK_EDID_SOURCE_USER_EDID_1)
 }
 */
 
@@ -199,8 +199,8 @@ define_function dxlinkNotifyTxVideoInputEdidSourceAnalog (dev dxlinkTxAnalogVide
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_EDID_SOURCE_DIGITAL_CALLBACK
 define_function dxlinkNotifyTxVideoInputEdidSourceDigital (dev dxlinkTxDigitalVideoInput, char edidSource[])
 {
-    // dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
-    // edidSource is the source of the EDID on the DXLink analog video input (DXLINK_EDID_SOURCE_MIRROR_OUT_1)
+	// dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
+	// edidSource is the source of the EDID on the DXLink analog video input (DXLINK_EDID_SOURCE_MIRROR_OUT_1)
 }
 */
 
@@ -208,8 +208,8 @@ define_function dxlinkNotifyTxVideoInputEdidSourceDigital (dev dxlinkTxDigitalVi
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_EDID_PREFERRED_RESOLUTION_ANALOG_CALLBACK
 define_function dxlinkNotifyVideoInputEdidPreferredResolutionAnalog (dev dxlinkTxAnalogVideoInput, char resolution[])
 {
-    // dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-    // resolution is the resolution listed in the EDID as the preferred (or native) resolution on the DXLink Tx analog video input
+	// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
+	// resolution is the resolution listed in the EDID as the preferred (or native) resolution on the DXLink Tx analog video input
 }
 */
 
@@ -217,8 +217,8 @@ define_function dxlinkNotifyVideoInputEdidPreferredResolutionAnalog (dev dxlinkT
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_HDCP_COMPLIANCE
 define_function dxlinkNotifyTxVideoInputHdcpCompliance (dev dxlinkTxDigitalVideoInput, char status[])
 {
-    // dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
-    // status is the status of the HDCP compliance on the video input port (cENABLE | cDISABLE)
+	// dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
+	// status is the status of the HDCP compliance on the video input port (cENABLE | cDISABLE)
 }
 */
 
@@ -226,8 +226,8 @@ define_function dxlinkNotifyTxVideoInputHdcpCompliance (dev dxlinkTxDigitalVideo
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_HORIZONTAL_SHIFT_CALLBACK
 define_function dxlinkNotifyTxVideoInputHorizontalShift (dev dxlinkTxAnalogVideoInput, sinteger horizontalShift)
 {
-    // dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-    // horizontalShift is the horizontal shift value
+	// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
+	// horizontalShift is the horizontal shift value
 }
 */
 
@@ -235,8 +235,8 @@ define_function dxlinkNotifyTxVideoInputHorizontalShift (dev dxlinkTxAnalogVideo
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_PHASE_CALLBACK
 define_function dxlinkNotifyTxVideoInputPhase (dev dxlinkTxAnalogVideoInput, integer phase)
 {
-    // dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-    // phase is the phase value
+	// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
+	// phase is the phase value
 }
 */
 
@@ -244,8 +244,8 @@ define_function dxlinkNotifyTxVideoInputPhase (dev dxlinkTxAnalogVideoInput, int
 #define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_VERTICAL_SHIFT_CALLBACK
 define_function dxlinkNotifyTxVideoInputVerticalShift (dev dxlinkTxAnalogVideoInput, sinteger verticalShift)
 {
-    // dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-    // verticalShift is the vertical shift value
+	// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
+	// verticalShift is the vertical shift value
 }
 */
 
@@ -271,7 +271,7 @@ define_function dxlinkNotifyRxVideoOutputScaleMode (dev dxlinkRxVideoOutput, cha
 define_function dxlinkNotifyRxVideoOutputResolution (dev dxlinkRxVideoOutput, char resolution[])
 {
 	// dxlinkRxVideoOutput is the D:P:S of the video output port on the DXLink receiver
-    // resolution is the video output resolution and refresh (HORxVER,REF)
+	// resolution is the video output resolution and refresh (HORxVER,REF)
 }
 */
 
@@ -280,7 +280,7 @@ define_function dxlinkNotifyRxVideoOutputResolution (dev dxlinkRxVideoOutput, ch
 define_function dxlinkNotifyRxVideoOutputAspectRatio (dev dxlinkRxVideoOutput, char aspectRatio[])
 {
 	// dxlinkRxVideoOutput is the D:P:S of the video output port on the DXLink receiver
-    // aspectRatio is the aspect ratio (DXLINK_ASPECT_RATIO_ANAMORPHIC | DXLINK_ASPECT_RATIO_MAINTAIN | DXLINK_ASPECT_RATIO_STRETCH | DXLINK_ASPECT_RATIO_ZOOM)
+	// aspectRatio is the aspect ratio (DXLINK_ASPECT_RATIO_ANAMORPHIC | DXLINK_ASPECT_RATIO_MAINTAIN | DXLINK_ASPECT_RATIO_STRETCH | DXLINK_ASPECT_RATIO_ZOOM)
 }
 */
 
@@ -289,7 +289,7 @@ define_function dxlinkNotifyRxVideoOutputAspectRatio (dev dxlinkRxVideoOutput, c
 define_function dxlinkNotifyRxVideoOutputTestPattern (dev dxlinkRxVideoOutput, char testPattern[])
 {
 	// dxlinkRxVideoOutput is the D:P:S of the video output port on the DXLink receiver
-    // testPattern is the test pattern (DXLINK_TEST_PATTERN_OFF | DXLINK_TEST_PATTERN_COLOR_BAR | DXLINK_TEST_PATTERN_GRAY_RAMP | DXLINK_TEST_PATTERN_SMPTE_BAR | DXLINK_TEST_PATTERN_HILO_TRACK | DXLINK_TEST_PATTERN_PLUGE | DXLINK_TEST_PATTERN_X_HATCH)
+	// testPattern is the test pattern (DXLINK_TEST_PATTERN_OFF | DXLINK_TEST_PATTERN_COLOR_BAR | DXLINK_TEST_PATTERN_GRAY_RAMP | DXLINK_TEST_PATTERN_SMPTE_BAR | DXLINK_TEST_PATTERN_HILO_TRACK | DXLINK_TEST_PATTERN_PLUGE | DXLINK_TEST_PATTERN_X_HATCH)
 }
 */
 
@@ -298,7 +298,7 @@ define_function dxlinkNotifyRxVideoOutputTestPattern (dev dxlinkRxVideoOutput, c
 define_function dxlinkNotifyRxVideoOutputMute (dev dxlinkRxVideoOutput, char muteStatus[])
 {
 	// dxlinkRxVideoOutput is the D:P:S of the video output port on the DXLink receiver
-    // muteStatus contains the video output mute status (cENABLE | cDISABLE)
+	// muteStatus contains the video output mute status (cENABLE | cDISABLE)
 }
 */
 
@@ -324,7 +324,7 @@ define_function dxlinkNotifyRxAudioOutputFormat (dev dxlinkRxAudioOutput, char a
 define_function dxlinkNotifyRxAudioOutputMute (dev dxlinkRxAudioOutput, char muteStatus[])
 {
 	// dxlinkRxAudioOutput is the D:P:S of the audio output port on the DXLink receiver.
-    // muteStatus contains the audio output mute status (cENABLE | cDISABLE)
+	// muteStatus contains the audio output mute status (cENABLE | cDISABLE)
 }
 */
 
@@ -384,7 +384,7 @@ define_function dxlinkNotifyRxDxlinkMode (dev dxlinkRxPort1, char modeStatus[])
 #define INCLUDE_DXLINK_NOTIFY_TX_USB_SERVICE_CALLBACK
 define_function dxlinkNotifyTxUsbService (dev dxlinkTxPort1, char usbServiceStatus[])
 {
-    // dxlinkTxPort1 is port 1 on the DXLink Tx.
+	// dxlinkTxPort1 is port 1 on the DXLink Tx.
 	// usbServiceStatus contains the status of the USB service (cENABLE | cDISABLE)
 }
 */
@@ -393,7 +393,7 @@ define_function dxlinkNotifyTxUsbService (dev dxlinkTxPort1, char usbServiceStat
 #define INCLUDE_DXLINK_NOTIFY_RX_USB_ROUTE_CALLBACK
 define_function dxlinkNotifyRxUsbRoute (dev dxlinkRxPort1, char usbRouteIp[])
 {
-    // dxlinkRxPort1 is port 1 on the DXLink Rx.
+	// dxlinkRxPort1 is port 1 on the DXLink Rx.
 	// usbRouteIp contains the IP address that the USB data from the DXLink Rx is routed to
 }
 */
