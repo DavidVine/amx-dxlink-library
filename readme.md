@@ -38,15 +38,15 @@ Consistent, descriptive control function names within **amx-dxlink-control** mak
 	 */
 	define_function dxlinkSetRxVideoOutputScaleMode (dev dxlinkVideoOutputPort, char scaleMode[])
 	{
-	    switch (scaleMode)
-	    {
+		switch (scaleMode)
+		{
 			case DXLINK_SCALE_MODE_AUTO:
 			case DXLINK_SCALE_MODE_BYPASS:
 			case DXLINK_SCALE_MODE_MANUAL:
 			{
 				amxSendCommand (dxlinkVideoOutputPort, "DXLINK_COMMAND_RX_VIDEO_OUT_SCALE_MODE,scaleMode")
 			}
-	    }
+		}
 	}
 
 No longer are you required to refer to the DXLink manual to work out what command headers are required or how to build a control string containing all the required values. This process was time consuming and often involved converting numeric data to string form and building string expressions which were long and complex.
@@ -58,8 +58,8 @@ Similarly, you no longer have to build events (data/channel/level, etc...) to ca
 	#define INCLUDE_DXLINK_NOTIFY_TX_VIDEO_INPUT_STATUS_ANALOG_CALLBACK
 	define_function dxlinkNotifyTxVideoInputStatusAnalog (dev dxlinkTxAnalogVideoInput, char signalStatus[])
 	{
-	    // dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-	    // signalStatus is the input signal status (DXLINK_SIGNAL_STATUS_NO_SIGNAL | DXLINK_SIGNAL_STATUS_UNKNOWN | DXLINK_SIGNAL_STATUS_VALID_SIGNAL)
+		// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
+		// signalStatus is the input signal status (DXLINK_SIGNAL_STATUS_NO_SIGNAL | DXLINK_SIGNAL_STATUS_UNKNOWN | DXLINK_SIGNAL_STATUS_VALID_SIGNAL)
 	}
 
 Functions also assist to neaten up the programming and provide added readability to the code and the auto-prompter within the NetLinx Studio editor makes it easy to find the function you're looking for.
@@ -171,8 +171,8 @@ Copy an empty, commented out callback function from **amx-dxlink-listener** and 
 	#define INCLUDE_DXLINK_NOTIFY_TX_SWITCH_CALLBACK
 	define_function dxlinkNotifyTxSwitch (dev dxlinkTxPort1, integer input, integer output)
 	{
-	    // dxlinkTxPort1 is port 1 on the DXLink Tx.
-	    // input contains the input port on the DXLink TX that has been selected (DXLINK_PORT_VIDEO_INPUT_ANALOG | DXLINK_PORT_VIDEO_INPUT_DIGITAL)
+		// dxlinkTxPort1 is port 1 on the DXLink Tx.
+		// input contains the input port on the DXLink TX that has been selected (DXLINK_PORT_VIDEO_INPUT_ANALOG | DXLINK_PORT_VIDEO_INPUT_DIGITAL)
 		// output contains the output of the DXLink TX. This is always DXLINK_PORT_VIDEO_OUTPUT.
 	}
 	*/
@@ -182,8 +182,8 @@ paste the callback function and `#define` statement into the main program file, 
 	#define INCLUDE_DXLINK_NOTIFY_TX_SWITCH_CALLBACK
 	define_function dxlinkNotifyTxSwitch (dev dxlinkTxPort1, integer input, integer output)
 	{
-	    // dxlinkTxPort1 is port 1 on the DXLink Tx.
-	    // input contains the input port on the DXLink TX that has been selected (DXLINK_PORT_VIDEO_INPUT_ANALOG | DXLINK_PORT_VIDEO_INPUT_DIGITAL)
+		// dxlinkTxPort1 is port 1 on the DXLink Tx.
+		// input contains the input port on the DXLink TX that has been selected (DXLINK_PORT_VIDEO_INPUT_ANALOG | DXLINK_PORT_VIDEO_INPUT_DIGITAL)
 		// output contains the output of the DXLink TX. This is always DXLINK_PORT_VIDEO_OUTPUT.
 		
 		if (dxlinkTxPort1 == dvDxlinkTxTableMain)
