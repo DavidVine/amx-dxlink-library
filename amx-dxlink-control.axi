@@ -17,6 +17,7 @@ char VERSION_AMX_DXLINK_CONTROL[] = 'v1.0.0'
 
 #include 'amx-dxlink-api'
 #include 'amx-device-control'
+#include 'common'
 
 /*
  * --------------------
@@ -229,7 +230,7 @@ define_function dxlinkRequestRxVideoOutputMute (dev dxlinkRxVideoOutputPort)
  */
 define_function dxlinkEnableRxVideoOutputMute (dev dxlinkRxVideoOutputPort)
 {
-	sendCommand (dxlinkRxVideoOutputPort, "DXLINK_COMMAND_RX_VIDEO_OUT_MUTE,cENABLE")
+	sendCommand (dxlinkRxVideoOutputPort, "DXLINK_COMMAND_RX_VIDEO_OUT_MUTE,STATUS_ENABLE")
 }
 
 /*
@@ -241,7 +242,7 @@ define_function dxlinkEnableRxVideoOutputMute (dev dxlinkRxVideoOutputPort)
  */
 define_function dxlinkDisableRxVideoOutputMute (dev dxlinkRxVideoOutputPort)
 {
-	sendCommand (dxlinkRxVideoOutputPort, "DXLINK_COMMAND_RX_VIDEO_OUT_MUTE,cDISABLE")
+	sendCommand (dxlinkRxVideoOutputPort, "DXLINK_COMMAND_RX_VIDEO_OUT_MUTE,STATUS_DISABLE")
 }
 
 
@@ -273,7 +274,7 @@ define_function dxlinkRequestRxAudioOutputMute (dev dxlinkRxAudioOutputPort)
  */
 define_function dxlinkEnableRxAudioOutputMute (dev dxlinkRxAudioOutputPort)
 {
-	sendCommand (dxlinkRxAudioOutputPort, "DXLINK_COMMAND_RX_AUDIO_OUT_MUTE,cENABLE")
+	sendCommand (dxlinkRxAudioOutputPort, "DXLINK_COMMAND_RX_AUDIO_OUT_MUTE,STATUS_ENABLE")
 }
 
 /*
@@ -285,7 +286,7 @@ define_function dxlinkEnableRxAudioOutputMute (dev dxlinkRxAudioOutputPort)
  */
 define_function dxlinkDisableRxAudioOutputMute (dev dxlinkRxAudioOutputPort)
 {
-	sendCommand (dxlinkRxAudioOutputPort, "DXLINK_COMMAND_RX_AUDIO_OUT_MUTE,cDISABLE")
+	sendCommand (dxlinkRxAudioOutputPort, "DXLINK_COMMAND_RX_AUDIO_OUT_MUTE,STATUS_DISABLE")
 }
 
 /*
@@ -354,7 +355,7 @@ define_function dxlinkRequestTxVideoInputAutoSelect (dev dxlinkTxPort1)
  */
 define_function dxlinkEnableTxVideoInputAutoSelect (dev dxlinkTxPort1)
 {
-	sendCommand (dxlinkTxPort1, "DXLINK_COMMAND_TX_VIDEO_IN_AUTO_SELECT,cENABLE")
+	sendCommand (dxlinkTxPort1, "DXLINK_COMMAND_TX_VIDEO_IN_AUTO_SELECT,STATUS_ENABLE")
 }
 
 /*
@@ -366,7 +367,7 @@ define_function dxlinkEnableTxVideoInputAutoSelect (dev dxlinkTxPort1)
  */
 define_function dxlinkDisableTxVideoInputAutoSelect (dev dxlinkTxPort1)
 {
-	sendCommand (dxlinkTxPort1, "DXLINK_COMMAND_TX_VIDEO_IN_AUTO_SELECT,cDISABLE")
+	sendCommand (dxlinkTxPort1, "DXLINK_COMMAND_TX_VIDEO_IN_AUTO_SELECT,STATUS_DISABLE")
 }
 
 /*
@@ -464,10 +465,10 @@ define_function dxlinkSetTxVideoInputFormatAnalog (dev dxlinkTxAnalogVideoInputP
 {
 	switch (videoFormatAnalog)
 	{
-		case cVIDEO_SIGNAL_FORMAT_COMPONENT:
-		case cVIDEO_SIGNAL_FORMAT_COMPOSITE:
-		case cVIDEO_SIGNAL_FORMAT_SVIDEO:
-		case cVIDEO_SIGNAL_FORMAT_VGA:
+		case VIDEO_SIGNAL_FORMAT_COMPONENT:
+		case VIDEO_SIGNAL_FORMAT_COMPOSITE:
+		case VIDEO_SIGNAL_FORMAT_SVIDEO:
+		case VIDEO_SIGNAL_FORMAT_VGA:
 		{
 			sendCommand (dxlinkTxAnalogVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_FORMAT,videoFormatAnalog")
 		}
@@ -485,8 +486,8 @@ define_function dxlinkSetTxVideoInputFormatDigital (dev dxlinkTxDigitalVideoInpu
 {
 	switch (videoFormatDigital)
 	{
-		case cVIDEO_SIGNAL_FORMAT_DVI:
-		case cVIDEO_SIGNAL_FORMAT_HDMI:
+		case VIDEO_SIGNAL_FORMAT_DVI:
+		case VIDEO_SIGNAL_FORMAT_HDMI:
 		{
 			sendCommand (dxlinkTxDigitalVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_FORMAT,videoFormatDigital")
 		}
@@ -514,7 +515,7 @@ define_function dxlinkRequestTxVideoInputAutoResolutionAnalog (dev dxlinkTxAnalo
  */
 define_function dxlinkEnableTxVideoInputAutoResolutionAnalog (dev dxlinkTxAnalogVideoInputPort)
 {
-	sendCommand (dxlinkTxAnalogVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_RESOLUTION_AUTO,cENABLE")
+	sendCommand (dxlinkTxAnalogVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_RESOLUTION_AUTO,STATUS_ENABLE")
 }
 
 /*
@@ -526,7 +527,7 @@ define_function dxlinkEnableTxVideoInputAutoResolutionAnalog (dev dxlinkTxAnalog
  */
 define_function dxlinkDisableTxVideoInputAutoResolutionAnalog (dev dxlinkTxAnalogVideoInputPort)
 {
-	sendCommand (dxlinkTxAnalogVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_RESOLUTION_AUTO,cDISABLE")
+	sendCommand (dxlinkTxAnalogVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_RESOLUTION_AUTO,STATUS_DISABLE")
 }
 
 /*
@@ -550,7 +551,7 @@ define_function dxlinkRequestTxVideoInputAutoResolutionDigital (dev dxlinkTxDigi
  */
 define_function dxlinkEnableTxVideoInputAutoResolutionDigital (dev dxlinkTxDigitalVideoInputPort)
 {
-	sendCommand (dxlinkTxDigitalVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_RESOLUTION_AUTO,cENABLE")
+	sendCommand (dxlinkTxDigitalVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_RESOLUTION_AUTO,STATUS_ENABLE")
 }
 
 /*
@@ -562,7 +563,7 @@ define_function dxlinkEnableTxVideoInputAutoResolutionDigital (dev dxlinkTxDigit
  */
 define_function dxlinkDisableTxVideoInputAutoResolutionDigital (dev dxlinkTxDigitalVideoInputPort)
 {
-	sendCommand (dxlinkTxDigitalVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_RESOLUTION_AUTO,cDISABLE")
+	sendCommand (dxlinkTxDigitalVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_RESOLUTION_AUTO,STATUS_DISABLE")
 }
 
 /*
@@ -713,7 +714,7 @@ define_function dxlinkRequestTxVideoInputHdcpComplianceDigital (dev dxlinkTxDigi
  */
 define_function dxlinkEnableTxVideoInputHdcpComplianceDigital (dev dxlinkTxDigitalVideoInputPort)
 {
-	sendCommand (dxlinkTxDigitalVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_HDCP_COMPLIANCE,cENABLE")
+	sendCommand (dxlinkTxDigitalVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_HDCP_COMPLIANCE,STATUS_ENABLE")
 }
 
 /*
@@ -725,7 +726,7 @@ define_function dxlinkEnableTxVideoInputHdcpComplianceDigital (dev dxlinkTxDigit
  */
 define_function dxlinkDisableTxVideoHdcpComplianceDigital (dev dxlinkTxDigitalVideoInputPort)
 {
-	sendCommand (dxlinkTxDigitalVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_HDCP_COMPLIANCE,cDISABLE")
+	sendCommand (dxlinkTxDigitalVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_HDCP_COMPLIANCE,STATUS_DISABLE")
 }
 
 /*
@@ -869,7 +870,7 @@ define_function dxlinkRequestTxAudioInputAutoFormatDetection (dev dxlinkTxAudioI
  */
 define_function dxlinkEnableTxAudioInputAutoFormatDetection (dev dxlinkTxAudioInputPort)
 {
-	sendCommand (dxlinkTxAudioInputPort, "DXLINK_COMMAND_TX_AUDIO_IN_FORMAT_AUTO,cENABLE")
+	sendCommand (dxlinkTxAudioInputPort, "DXLINK_COMMAND_TX_AUDIO_IN_FORMAT_AUTO,STATUS_ENABLE")
 }
 
 /*
@@ -881,7 +882,7 @@ define_function dxlinkEnableTxAudioInputAutoFormatDetection (dev dxlinkTxAudioIn
  */
 define_function dxlinkDisableTxAudioInputAutoFormatDetection (dev dxlinkTxAudioInputPort)
 {
-	sendCommand (dxlinkTxAudioInputPort, "DXLINK_COMMAND_TX_AUDIO_IN_FORMAT_AUTO,cDISABLE")
+	sendCommand (dxlinkTxAudioInputPort, "DXLINK_COMMAND_TX_AUDIO_IN_FORMAT_AUTO,STATUS_DISABLE")
 }
 
 
@@ -914,7 +915,7 @@ define_function dxlinkRequestTxUsbHidService (dev dxlinkTxUsbPort)
  */
 define_function dxlinkEnableTxUsbHidService (dev dxlinkTxUsbPort)
 {
-	sendCommand (dxlinkTxUsbPort, "DXLINK_COMMAND_TX_USB_HID_SERVICE,cENABLE")
+	sendCommand (dxlinkTxUsbPort, "DXLINK_COMMAND_TX_USB_HID_SERVICE,STATUS_ENABLE")
 }
 
 /*
@@ -926,7 +927,7 @@ define_function dxlinkEnableTxUsbHidService (dev dxlinkTxUsbPort)
  */
 define_function dxlinkDisableTxUsbHidService (dev dxlinkTxUsbPort)
 {
-	sendCommand (dxlinkTxUsbPort, "DXLINK_COMMAND_TX_USB_HID_SERVICE,cDISABLE")
+	sendCommand (dxlinkTxUsbPort, "DXLINK_COMMAND_TX_USB_HID_SERVICE,STATUS_DISABLE")
 }
 
 
@@ -1089,7 +1090,7 @@ define_function dxlinkSetDxlinkMode (dev dxlinkPort1, char dxlinkMode[])
  */
 define_function dxlinkEnableIcsLan (dev dxlinkPort1)
 {
-	sendCommand (dxlinkPort1, "DXLINK_COMMAND_ICSLAN,cENABLE")
+	sendCommand (dxlinkPort1, "DXLINK_COMMAND_ICSLAN,STATUS_ENABLE")
 }
 
 /*
@@ -1101,7 +1102,7 @@ define_function dxlinkEnableIcsLan (dev dxlinkPort1)
  */
 define_function dxlinkDisableIcsLan (dev dxlinkPort1)
 {
-	sendCommand (dxlinkPort1, "DXLINK_COMMAND_ICSLAN,cDISABLE")
+	sendCommand (dxlinkPort1, "DXLINK_COMMAND_ICSLAN,STATUS_DISABLE")
 }
 
 /*

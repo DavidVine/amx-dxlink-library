@@ -92,6 +92,7 @@ amx-dxlink-control
 #####Dependencies:
 + amx-dxlink-api
 + amx-device-control (*see readme for amx-device-library for info*)
++ common (*see readme for amx-common-library for info*)
 
 #####Description: 
 Contains functions for controlling the various components of an AMX DXLink end-point device and requesting information from the DXLink device.
@@ -126,6 +127,7 @@ amx-dxlink-listener
 ----------------
 #####Dependencies:
 + amx-dxlink-api
++ common (*see readme for amx-common-library for info*)
 
 #####Description:
 Contains dev arrays for listening to traffic returned from the AMX DXLink end-point device.

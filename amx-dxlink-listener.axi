@@ -16,7 +16,7 @@ define_constant
 char VERSION_AMX_DXLINK_LISTENER[] = 'v1.0.0'
 
 include 'amx-dxlink-api'
-include 'debug'
+#include 'common'
 
 
 /*
@@ -128,7 +128,7 @@ define_function dxlinkNotifyTxVideoInputStatusDigital (dev dxlinkTxDigitalVideoI
 define_function dxlinkNotifyTxVideoInputFormatAnalog (dev dxlinkTxAnalogVideoInput, char videoFormat[])
 {
 	// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-	// videoFormat is the video format (cVIDEO_SIGNAL_FORMAT_VGA | cVIDEO_SIGNAL_FORMAT_COMPOSITE | cVIDEO_SIGNAL_FORMAT_COMPONENT | cVIDEO_SIGNAL_FORMAT_SVIDEO)
+	// videoFormat is the video format (VIDEO_SIGNAL_FORMAT_VGA | VIDEO_SIGNAL_FORMAT_COMPOSITE | VIDEO_SIGNAL_FORMAT_COMPONENT | VIDEO_SIGNAL_FORMAT_SVIDEO)
 }
 */
 
@@ -137,7 +137,7 @@ define_function dxlinkNotifyTxVideoInputFormatAnalog (dev dxlinkTxAnalogVideoInp
 define_function dxlinkNotifyTxVideoInputFormatDigital (dev dxlinkTxDigitalVideoInput, char videoFormat[])
 {
 	// dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
-	// videoFormat is the video format (cVIDEO_SIGNAL_FORMAT_DVI | cVIDEO_SIGNAL_FORMAT_HDMI)
+	// videoFormat is the video format (VIDEO_SIGNAL_FORMAT_DVI | VIDEO_SIGNAL_FORMAT_HDMI)
 }
 */
 
@@ -146,7 +146,7 @@ define_function dxlinkNotifyTxVideoInputFormatDigital (dev dxlinkTxDigitalVideoI
 define_function dxlinkNotifyTxVideoInputAutoSelect (dev dxlinkTxPort1, char status[])
 {
 	// dxlinkTxPort1 is the port #1 on the DXLink Tx
-	// status contains the auto video input select status (cENABLE | cDISABLE)
+	// status contains the auto video input select status (STATUS_ENABLE | DISABLE)
 }
 */
 
@@ -155,7 +155,7 @@ define_function dxlinkNotifyTxVideoInputAutoSelect (dev dxlinkTxPort1, char stat
 define_function dxlinkNotifyTxVideoInputResolutionAutoAnalog (dev dxlinkTxAnalogVideoInput, char status[])
 {
 	// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-	// status is the auto resolution detect status (cENABLE | cDISABLE)
+	// status is the auto resolution detect status (STATUS_ENABLE | DISABLE)
 }
 */
 
@@ -164,7 +164,7 @@ define_function dxlinkNotifyTxVideoInputResolutionAutoAnalog (dev dxlinkTxAnalog
 define_function dxlinkNotifyTxVideoInputResolutionAutoDigital (dev dxlinkTxDigitalVideoInput, char status[])
 {
 	// dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
-	// status is the auto resolution detect status (cENABLE | cDISABLE)
+	// status is the auto resolution detect status (STATUS_ENABLE | DISABLE)
 }
 */
 
@@ -218,7 +218,7 @@ define_function dxlinkNotifyVideoInputEdidPreferredResolutionAnalog (dev dxlinkT
 define_function dxlinkNotifyTxVideoInputHdcpCompliance (dev dxlinkTxDigitalVideoInput, char status[])
 {
 	// dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
-	// status is the status of the HDCP compliance on the video input port (cENABLE | cDISABLE)
+	// status is the status of the HDCP compliance on the video input port (STATUS_ENABLE | DISABLE)
 }
 */
 
@@ -298,7 +298,7 @@ define_function dxlinkNotifyRxVideoOutputTestPattern (dev dxlinkRxVideoOutput, c
 define_function dxlinkNotifyRxVideoOutputMute (dev dxlinkRxVideoOutput, char muteStatus[])
 {
 	// dxlinkRxVideoOutput is the D:P:S of the video output port on the DXLink receiver
-	// muteStatus contains the video output mute status (cENABLE | cDISABLE)
+	// muteStatus contains the video output mute status (STATUS_ENABLE | DISABLE)
 }
 */
 
@@ -324,7 +324,7 @@ define_function dxlinkNotifyRxAudioOutputFormat (dev dxlinkRxAudioOutput, char a
 define_function dxlinkNotifyRxAudioOutputMute (dev dxlinkRxAudioOutput, char muteStatus[])
 {
 	// dxlinkRxAudioOutput is the D:P:S of the audio output port on the DXLink receiver.
-	// muteStatus contains the audio output mute status (cENABLE | cDISABLE)
+	// muteStatus contains the audio output mute status (STATUS_ENABLE | DISABLE)
 }
 */
 
@@ -359,7 +359,7 @@ define_function dxlinkNotifyRxFirmwareVersion (dev dxlinkRxPort1, char firmwareV
 define_function dxlinkNotifyTxDxlinkMode (dev dxlinkTxPort1, char modeStatus[])
 {
 	// dxlinkTxPort1 is the port 1 on the DXLink Tx
-	// modeStatus contains the status of the DXLink mode (cENABLE | cDISABLE)
+	// modeStatus contains the status of the DXLink mode (STATUS_ENABLE | DISABLE)
 }
 */
 
@@ -368,7 +368,7 @@ define_function dxlinkNotifyTxDxlinkMode (dev dxlinkTxPort1, char modeStatus[])
 define_function dxlinkNotifyRxDxlinkMode (dev dxlinkRxPort1, char modeStatus[])
 {
 	// dxlinkRxPort1 is the port 1 on the DXLink Rx
-	// modeStatus contains the status of the DXLink mode (cENABLE | cDISABLE)
+	// modeStatus contains the status of the DXLink mode (STATUS_ENABLE | DISABLE)
 }
 */
 
@@ -385,7 +385,7 @@ define_function dxlinkNotifyRxDxlinkMode (dev dxlinkRxPort1, char modeStatus[])
 define_function dxlinkNotifyTxUsbService (dev dxlinkTxPort1, char usbServiceStatus[])
 {
 	// dxlinkTxPort1 is port 1 on the DXLink Tx.
-	// usbServiceStatus contains the status of the USB service (cENABLE | cDISABLE)
+	// usbServiceStatus contains the status of the USB service (STATUS_ENABLE | DISABLE)
 }
 */
 
@@ -420,7 +420,7 @@ define_function dxlinkNotifyTxAudioInputFormat (dev dxlinkTxAudioInput, char aud
 define_function dxlinkNotifyTxAudioInputFormatAuto (dev dxlinkTxAudioInput, char autoStatus[])
 {
 	// dxlinkTxAudioInput is the D:P:S of the audio input port on the DXLink transmitter.
-	// autoStatus contains the setting of the automatic audio input format detection feature (cENABLE | cDISABLE)
+	// autoStatus contains the setting of the automatic audio input format detection feature (STATUS_ENABLE | DISABLE)
 }
 */
 
