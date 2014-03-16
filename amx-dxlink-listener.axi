@@ -191,7 +191,7 @@ define_function dxlinkNotifyTxVideoInputResolutionDigital (dev dxlinkTxDigitalVi
 define_function dxlinkNotifyTxVideoInputEdidSourceAnalog (dev dxlinkTxAnalogVideoInput, char edidSource[])
 {
 	// dxlinkTxAnalogVideoInput is the analog video input port on the DXLink Tx
-	// edidSource is the source of the EDID on the DXLink analog video input (DXLINK_EDID_SOURCE_ALL_RESOLUTIONS | DXLINK_EDID_SOURCE_USER_EDID_1)
+	// edidSource is the source of the EDID on the DXLink analog video input (DXLINK_EDID_SOURCE_ALL_RESOLUTIONS | DXLINK_EDID_SOURCE_FULL_SCREEN | DXLINK_EDID_SOURCE_WIDE_SCREEN | DXLINK_EDID_SOURCE_USER_EDID_1 | DXLINK_EDID_SOURCE_USER_EDID_MODIFIED)
 }
 */
 
@@ -200,7 +200,7 @@ define_function dxlinkNotifyTxVideoInputEdidSourceAnalog (dev dxlinkTxAnalogVide
 define_function dxlinkNotifyTxVideoInputEdidSourceDigital (dev dxlinkTxDigitalVideoInput, char edidSource[])
 {
 	// dxlinkTxDigitalVideoInput is the digital video input port on the DXLink Tx
-	// edidSource is the source of the EDID on the DXLink analog video input (DXLINK_EDID_SOURCE_MIRROR_OUT_1)
+	// edidSource is the source of the EDID on the DXLink analog video input (DXLINK_EDID_SOURCE_ALL_RESOLUTIONS | DXLINK_EDID_SOURCE_FULL_SCREEN | DXLINK_EDID_SOURCE_WIDE_SCREEN | DXLINK_EDID_SOURCE_MIRROR_OUT_1 | DXLINK_EDID_SOURCE_MIRROR_OUT_LOCAL | DXLINK_EDID_SOURCE_USER_EDID_1 | DXLINK_EDID_SOURCE_USER_EDID_MODIFIED)
 }
 */
 
