@@ -1,4 +1,4 @@
-PROGRAM_NAME='amx-dxlink-listener'
+program_name='amx-dxlink-listener'
 
 #if_not_defined __AMX_DXLINK_LISTENER__
 #define __AMX_DXLINK_LISTENER__

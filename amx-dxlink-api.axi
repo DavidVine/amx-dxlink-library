@@ -1,4 +1,4 @@
-PROGRAM_NAME='amx-dxlink-api'
+program_name='amx-dxlink-api'
 
 #if_not_defined __AMX_DXLINK_API__
 #define __AMX_DXLINK_API__

@@ -1,4 +1,4 @@
-PROGRAM_NAME='amx-dxlink-control'
+program_name='amx-dxlink-control'
 
 #if_not_defined __AMX_DXLINK_CONTROL__
 #define __AMX_DXLINK_CONTROL__
