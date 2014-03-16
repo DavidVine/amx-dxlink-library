@@ -15,7 +15,7 @@ define_constant
 
 char VERSION_AMX_DXLINK_LISTENER[] = 'v1.0.0'
 
-include 'amx-dxlink-api'
+#include 'amx-dxlink-api'
 #include 'common'
 
 
@@ -146,7 +146,7 @@ define_function dxlinkNotifyTxVideoInputFormatDigital (dev dxlinkTxDigitalVideoI
 define_function dxlinkNotifyTxVideoInputAutoSelect (dev dxlinkTxPort1, char status[])
 {
 	// dxlinkTxPort1 is the port #1 on the DXLink Tx
-	// status contains the auto video input select status (STATUS_ENABLE | DISABLE)
+	// status contains the auto video input select status (STATUS_ENABLE | DISABLE | DXLINK_AUTO_SELECT_ANALOG_PRIORITY)
 }
 */
 
