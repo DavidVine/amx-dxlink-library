@@ -682,7 +682,10 @@ define_function dxlinkSetTxVideoInputEdidSourceAnalog (dev dxlinkTxAnalogVideoIn
 	switch (edidSource)
 	{
 		case DXLINK_EDID_SOURCE_ALL_RESOLUTIONS:
+		case DXLINK_EDID_SOURCE_FULL_SCREEN:
+		case DXLINK_EDID_SOURCE_WIDE_SCREEN:
 		case DXLINK_EDID_SOURCE_USER_EDID_1:
+		case DXLINK_EDID_SOURCE_USER_EDID_MODIFIED:
 		{
 			sendCommand (dxlinkTxAnalogVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_EDID_SOURCE,edidSource")
 		}
@@ -700,7 +703,13 @@ define_function dxlinkSetTxVideoInputEdidSourceDigital (dev dxlinkTxDigitalVideo
 {
 	switch (edidSource)
 	{
+		case DXLINK_EDID_SOURCE_ALL_RESOLUTIONS:
+		case DXLINK_EDID_SOURCE_FULL_SCREEN:
+		case DXLINK_EDID_SOURCE_WIDE_SCREEN:
 		case DXLINK_EDID_SOURCE_MIRROR_OUT_1:
+		case DXLINK_EDID_SOURCE_MIRROR_OUT_LOCAL:
+		case DXLINK_EDID_SOURCE_USER_EDID_1:
+		case DXLINK_EDID_SOURCE_USER_EDID_MODIFIED:
 		{
 			sendCommand (dxlinkTxDigitalVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_EDID_SOURCE,edidSource")
 		}
