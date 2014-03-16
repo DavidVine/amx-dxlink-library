@@ -351,11 +351,25 @@ define_function dxlinkRequestTxVideoInputAutoSelect (dev dxlinkTxPort1)
  * 
  * Arguments:   dev dxlinkTxPort1 - port 1 on the DXLink Tx
  * 
- * Description: Enables the video input auto select mode on DXLink Tx.
+ * Description: Enables the video input auto select mode on DXLink Tx and sets
+ *              the priority to the digital video input.
  */
-define_function dxlinkEnableTxVideoInputAutoSelect (dev dxlinkTxPort1)
+define_function dxlinkEnableTxVideoInputAutoSelectPriotityDigital (dev dxlinkTxPort1)
 {
 	sendCommand (dxlinkTxPort1, "DXLINK_COMMAND_TX_VIDEO_IN_AUTO_SELECT,STATUS_ENABLE")
+}
+
+/*
+ * Function:    dxlinkEnableTxVideoInputAutoSelect
+ * 
+ * Arguments:   dev dxlinkTxPort1 - port 1 on the DXLink Tx
+ * 
+ * Description: Enables the video input auto select mode on DXLink Tx and sets
+ *              the priority to the analog video input.
+ */
+define_function dxlinkEnableTxVideoInputAutoSelectPriotityAnalog (dev dxlinkTxPort1)
+{
+	sendCommand (dxlinkTxPort1, "DXLINK_COMMAND_TX_VIDEO_IN_AUTO_SELECT,DXLINK_AUTO_SELECT_ANALOG_PRIORITY")
 }
 
 /*
