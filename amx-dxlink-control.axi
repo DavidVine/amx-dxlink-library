@@ -347,7 +347,7 @@ define_function dxlinkRequestTxVideoInputAutoSelect (dev dxlinkTxPort1)
 }
 
 /*
- * Function:    dxlinkEnableTxVideoInputAutoSelect
+ * Function:    dxlinkEnableTxVideoInputAutoSelectPriotityDigital
  * 
  * Arguments:   dev dxlinkTxPort1 - port 1 on the DXLink Tx
  * 
@@ -360,7 +360,7 @@ define_function dxlinkEnableTxVideoInputAutoSelectPriotityDigital (dev dxlinkTxP
 }
 
 /*
- * Function:    dxlinkEnableTxVideoInputAutoSelect
+ * Function:    dxlinkEnableTxVideoInputAutoSelectPriotityAnalog
  * 
  * Arguments:   dev dxlinkTxPort1 - port 1 on the DXLink Tx
  * 
