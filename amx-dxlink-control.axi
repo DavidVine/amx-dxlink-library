@@ -982,7 +982,7 @@ define_function dxlinkRequestRxUsbHidRoute (dev dxlinkRxUsbPort)
  *
  * Description: Enables USB HID service on Rx.
  */
-define_function dxlinkSetRxUsbHidRoute (dev dxlinkRxUsbPort, char ipAddressTx)
+define_function dxlinkSetRxUsbHidRoute (dev dxlinkRxUsbPort, char ipAddressTx[])
 {
 	sendCommand (dxlinkRxUsbPort, "DXLINK_COMMAND_RX_USB_HID_ROUTE,ipAddressTx")
 }
