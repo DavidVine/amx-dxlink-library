@@ -741,13 +741,13 @@ define_function dxlinkEnableTxVideoInputHdcpComplianceDigital (dev dxlinkTxDigit
 }
 
 /*
- * Function:    dxlinkDisableTxVideoHdcpComplianceDigital
+ * Function:    dxlinkDisableTxVideoInputoHdcpComplianceDigital
  *
  * Arguments:   dev dxlinkTxDigitalVideoInputPort - digital video input port on the DXLink Tx
  *
  * Description: Disable the HDCP compliance setting on the DXLink Tx digital video input port.
  */
-define_function dxlinkDisableTxVideoHdcpComplianceDigital (dev dxlinkTxDigitalVideoInputPort)
+define_function dxlinkDisableTxVideoInputHdcpComplianceDigital (dev dxlinkTxDigitalVideoInputPort)
 {
 	sendCommand (dxlinkTxDigitalVideoInputPort, "DXLINK_COMMAND_TX_VIDEO_IN_HDCP_COMPLIANCE,STATUS_DISABLE")
 }
