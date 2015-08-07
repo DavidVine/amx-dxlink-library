@@ -22,51 +22,47 @@ char VERSION_AMX_DXLINK_LISTENER[] = 'v1.0.0'
 /*
  * --------------------
  * Device arrays
+ *
+ * Any components that are to be monitored should have the appropriate
+ * device array copied into the main program DEFINE_VARIABLE section and the 
+ * associated #DEFINE compiler directives should be copied to the top of the 
+ * main program, above the line of code that this include file is included 
+ * into the main program.
  * --------------------
  */
 
 define_variable
-
-
+/*
 // Transmitters
-#if_not_defined dvDxlinkTxMainPorts
+#DEFINE INCLUDE_DXLINK_MONITOR_TX_MAIN
 dev dvDxlinkTxMainPorts[] = {7001:1:0}
-#end_if
 
-#if_not_defined dvDxlinkTxUsbPorts
+#DEFINE INCLUDE_DXLINK_MONITOR_TX_USB
 dev dvDxlinkTxUsbPorts[] = {7001:5:0}
-#end_if
 
-#if_not_defined dvDxlinkTxDigitalVideoInPorts
+#DEFINE INCLUDE_DXLINK_MONITOR_TX_VIDEO_INPUT_DIGITAL
 dev dvDxlinkTxDigitalVideoInPorts[] = {7001:7:0}
-#end_if
 
-#if_not_defined dvDxlinkTxAudInPorts
+#DEFINE INCLUDE_DXLINK_MONITOR_TX_AUDIO_INPUT
 dev dvDxlinkTxAudInPorts[] = {7001:7:0}
-#end_if
 
-#if_not_defined dvDxlinkTxAnalogVidInPorts
+#DEFINE INCLUDE_DXLINK_MONITOR_TX_VIDEO_INPUT_ANALOG
 dev dvDxlinkTxAnalogVidInPorts[] = {7001:8:0}
-#end_if
 
 
 // Receivers
-#if_not_defined dvDxlinkRxMainPorts
+#DEFINE INCLUDE_DXLINK_MONITOR_RX_MAIN
 dev dvDxlinkRxMainPorts[] = {8001:1:0}
-#end_if
 
-#if_not_defined dvDxlinkRxUsbPorts
+#DEFINE INCLUDE_DXLINK_MONITOR_RX_USB
 dev dvDxlinkRxUsbPorts[] = {8001:5:0}
-#end_if
 
-#if_not_defined dvDxlinkRxVidOutPorts
+#DEFINE INCLUDE_DXLINK_MONITOR_RX_VIDEO_OUTPUT
 dev dvDxlinkRxVidOutPorts[] = {8001:6:0}
-#end_if
 
-#if_not_defined dvDxlinkRxAudOutPorts
+#DEFINE INCLUDE_DXLINK_MONITOR_RX_AUDIO_OUTPUT
 dev dvDxlinkRxAudOutPorts[] = {8001:6:0}
-#end_if
-
+*/
 
 
 
@@ -447,6 +443,7 @@ define_event
  */
 
 
+#if_defined INCLUDE_DXLINK_MONITOR_TX_MAIN
 data_event[dvDxlinkTxMainPorts]
 {
 	command:
@@ -503,7 +500,9 @@ data_event[dvDxlinkTxMainPorts]
 		}
 	}
 }
+#end_if
 
+#if_defined INCLUDE_DXLINK_MONITOR_TX_USB
 data_event[dvDxlinkTxUsbPorts]
 {
 	command:
@@ -531,7 +530,9 @@ data_event[dvDxlinkTxUsbPorts]
 		}
 	}
 }
+#end_if
 
+#if_defined INCLUDE_DXLINK_MONITOR_TX_AUDIO_INPUT
 data_event[dvDxlinkTxAudInPorts]
 {
 	command:
@@ -566,7 +567,9 @@ data_event[dvDxlinkTxAudInPorts]
 		}
 	}
 }
+#end_if
 
+#if_defined INCLUDE_DXLINK_MONITOR_TX_VIDEO_INPUT_DIGITAL
 data_event[dvDxlinkTxDigitalVideoInPorts]
 {
 	command:
@@ -629,7 +632,9 @@ data_event[dvDxlinkTxDigitalVideoInPorts]
 		}
 	}
 }
+#end_if
 
+#if_defined INCLUDE_DXLINK_MONITOR_TX_VIDEO_INPUT_ANALOG
 data_event[dvDxlinkTxAnalogVidInPorts]
 {
 	command:
@@ -713,7 +718,9 @@ data_event[dvDxlinkTxAnalogVidInPorts]
 		}
 	}
 }
+#end_if
 
+#if_defined INCLUDE_DXLINK_MONITOR_RX_MAIN
 data_event[dvDxlinkRxMainPorts]
 {
 	command:
@@ -748,7 +755,9 @@ data_event[dvDxlinkRxMainPorts]
 		}
 	}
 }
+#end_if
 
+#if_defined INCLUDE_DXLINK_MONITOR_RX_USB
 data_event[dvDxlinkRxUsbPorts]
 {
 	command:
@@ -776,7 +785,9 @@ data_event[dvDxlinkRxUsbPorts]
 		}
 	}
 }
+#end_if
 
+#if_defined INCLUDE_DXLINK_MONITOR_RX_VIDEO_OUTPUT
 data_event[dvDxlinkRxVidOutPorts]
 {
 	command:
@@ -832,7 +843,9 @@ data_event[dvDxlinkRxVidOutPorts]
 		}
 	}
 }
+#end_if
 
+#if_defined INCLUDE_DXLINK_MONITOR_RX_AUDIO_OUTPUT
 data_event[dvDxlinkRxAudOutPorts]
 {
 	command:
@@ -867,5 +880,6 @@ data_event[dvDxlinkRxAudOutPorts]
 		}
 	}
 }
+#end_if
 
 #end_if
